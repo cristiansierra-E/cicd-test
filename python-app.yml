@@ -37,21 +37,4 @@ jobs:
     - name: Test with pytest
       run: |
         python -m pytest -v --cov=. --cov-report=html --html=report.html
-    - name: Build Clase
-      run: |
-        mkdir build
-        cp calculadora.py build/
-    
-    - name: Build Reporte COV
-      run: |
-       cp -r htmlcov build/
-    
-    - name: Build Reporte HTML
-      run: |
-       cp -r assets build/
-       cp -r report.html build/
-    - name: Build Artefacto ZIP
-      uses: actions/upload-artifact@v4
-      with:
-        name: Artefacto-Probado
-        path: build/
+        
