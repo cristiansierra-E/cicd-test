@@ -37,19 +37,20 @@ jobs:
     - name: Prueba con pytest
       run: |
        python -m pytest -v --cov=. --cov-report=html --html=report.html
-       - name: Generar clase
-          run: |
+
+    - name: Generar clase
+      run: |
         mkdir build
         cp calculadora.py build/
-        - name: Generar informe de cobertura COV
-          run: |
-          cp -r htmlcov build/
-          - name: Generar informe HTML
-          run: |
-          cp -r assets build/
-          cp -r report.html build/
-          - name: Generar artefacto ZIP.
-          uses: actions/upload-artifact@v4
-          with:
-          name: Artefacto-Probado
-          path: build/
+    - name: Generar informe de cobertura COV
+      run: |
+       cp -r htmlcov build/
+    - name: Generar informe HTML
+      run: |
+        cp -r assets build/
+        cp -r report.html build/
+    - name: Generar artefacto ZIP.
+      uses: actions/upload-artifact@v4
+      with:
+      name: Artefacto-Probado
+      path: build/
