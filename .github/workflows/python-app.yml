@@ -52,5 +52,5 @@ jobs:
     - name: Generar artefacto ZIP.
       uses: actions/upload-artifact@v4
       with:
-      name: Artefacto-Probado
-      path: build/
+       name: Artefacto-Probado
+       path: build/
