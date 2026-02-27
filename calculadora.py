@@ -6,5 +6,8 @@ class Calculadora:
  def multiplicacion(self, a, b):
     return a * b #hola
 
+ def resta(self, a, b):
+    return a - b #hola
+
 #python -m pytest
 #python -m pytest -v
